@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'github-prasath', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_TOKEN')]) {
+                withCredentials([usernamePassword(credentialsId: 'github_prasath', usernameVariable: 'GIT_USER', passwordVariable: 'GIT_TOKEN')]) {
                     git url: "https://$GIT_USER:$GIT_TOKEN@github.com/prasath041/jenkines-kubernetes.git", branch: 'main'
                 }
             }
